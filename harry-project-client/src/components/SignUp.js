@@ -7,19 +7,15 @@ export default class SignUp extends Component{
             <div>
                 <form className="ui form">
                     <div className="field">
-                        <label>First Name</label>
-                        <input type="text" name="first-name" placeholder="First Name" onChange={this.props.setLogInUser}/>
+                        <label>Name: </label>
+                        <input type="text" name="first-name" placeholder="Name" onChange={this.props.setLogInUser}/>
                     </div>
-                    <Link to ={{
-                        pathname:'/hat',
-                        hatProps:{
-                            name: ''
-                        }
-                    }}
+                    <Link 
+                        to ={{pathname:'/hat',}}
                         className="ui button"
                         type="submit"
-                        onClick={this.props.signUp}>
-                        Sign up
+                        onClick={this.props.signUp}
+                        >Sign up
                     </Link>
                 </form>
             </div>
