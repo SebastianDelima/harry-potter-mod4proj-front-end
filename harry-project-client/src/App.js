@@ -21,7 +21,7 @@ class App extends React.Component{
       logInUser: null,
       validName: null
     }
-    
+
   }
 
   setCurrentUser = (e) =>{
@@ -95,7 +95,7 @@ class App extends React.Component{
   <Fragment>
     <Router>
       <Route exact path='/'           component={Welcome}/>
-      <Route exact path='/hat'        render={()=> this.state.validName   ? <Hat/>  : <Redirect to ='signup'/>}/>
+      <Route exact path='/hat'        render={()=> this.state.validName   ? <Hat userName={this.state.logInUser}/>  : <Redirect to ='signup'/>}/>
       <Route exact path='/main'       render={()=> this.state.currentUser ? <Main/> : <Redirect to ="/login"/>}/> 
       <Route exact path='/login'      render={()=> this.state.currentUser ? <Redirect to ='/main'/> : <Login setCurrentUser={this.setCurrentUser} setLogInUser={this.setLogInUser}/>} /> 
       <Route exact path='/signup'     render={()=> this.state.currentUser ? <Redirect to ='/main'/> : <SignUp signUp={this.signUp} setLogInUser={this.setLogInUser} user={this.state.logInUser}/> } />
