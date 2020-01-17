@@ -5,9 +5,9 @@ class Main extends React.Component{
   render(){
       return(
       <div>
-       <NavLink to='/characters' exact activeStyle={{background: 'red'}}>Characters</NavLink>
+       <NavLink to='/characters' exact>Characters</NavLink>
        <p></p>
-       <NavLink to='/spells' exact activeStyle={{background: 'blue'}}>Spells</NavLink>
+       <NavLink to='/spells' exact>Spells</NavLink>
       </div>)
   }
 }
