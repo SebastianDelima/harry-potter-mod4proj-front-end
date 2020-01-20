@@ -7,10 +7,10 @@ class CharacterContainer extends React.Component{
         <Fragment>
         <div class="ui category search">
         <div class="ui icon input">
-            <input class="prompt" type="text" placeholder="Search..." />
-            <i class="search icon"></i>
+            <input className="prompt" type="text" placeholder="Search..." />
+            <i className="search icon"></i>
         </div>
-        <div class="results"></div>
+        <div className="results"></div>
         </div>
         <div className="ui two column centered grid">
           {
