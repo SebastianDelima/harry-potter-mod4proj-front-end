@@ -1,6 +1,23 @@
 import React, { Component } from 'react';
 
 export default class CharacterCard extends Component{
+
+    addToFavorites = (e) => {
+        debugger
+        let objectConfig = {
+            method: 'POST',
+            headers: {
+               'Content-Type':'application/json'
+            }, 
+            body: JSON.stringify({
+             user_id: 0,
+             character_id: e.currentTarget.dataset.id
+            })
+        }
+            fetch('http://127.0.0.1:3000/favorite_characters', objectConfig)
+        }
+    
+
     render() {
         return (
             <div className="ui  cards" id="image">
@@ -21,7 +38,7 @@ export default class CharacterCard extends Component{
                     </div>
                     <div className="extra content">
                     <div className="meta">
-                        <button href="/">Add to My Wizards</button>
+                        <button data-id={this.props.character.id} onClick={this.addToFavorites}>Add to My Wizards</button>
                     </div>
                     </div>
                 </div>

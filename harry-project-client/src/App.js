@@ -8,6 +8,8 @@ import Hat from './components/Hat'
 import Welcome from './components/Welcome'
 import Login from './components/Login'
 import SignUp from './components/SignUp'
+import FavoritesContainer from './containers/FavoritesContainer';
+
 
 class App extends React.Component{
 
@@ -25,18 +27,24 @@ class App extends React.Component{
   }
 
   setCurrentUser = (e) =>{
-
+  
     e.preventDefault()
-   
+  
     let findUser = this.state.users.find(user => user.name === this.state.logInUser)
 
     if(findUser !== undefined){
       this.setState({
-        currentUser:true
+        currentUser: true
       })
     }else{
       window.alert("Wrong username or password")
     }
+  }
+
+  setCurrentUserSignUp = () =>{
+    this.setState({
+      currentUser: true
+    })
   }
 
   setLogInUser = (e) => {
@@ -95,7 +103,9 @@ class App extends React.Component{
   <Fragment>
     <Router>
       <Route exact path='/'           component={Welcome}/>
-      <Route exact path='/hat'        render={()=> this.state.validName   ? <Hat setCurrentUser={this.setCurrentUser} userName={this.state.logInUser}/>  : <Redirect to ='signup'/>}/>
+      <Route exact path ='/favorites' component={FavoritesContainer}/>
+
+      <Route exact path='/hat'        render={()=> this.state.validName   ? <Hat setCurrentUser={this.setCurrentUserSignUp} userName={this.state.logInUser}/>  : <Redirect to ='signup'/>}/>
       <Route exact path='/main'       render={()=> this.state.currentUser ? <Main/> : <Redirect to ="/login"/>}/> 
       <Route exact path='/login'      render={()=> this.state.currentUser ? <Redirect to ='/main'/> : <Login setCurrentUser={this.setCurrentUser} setLogInUser={this.setLogInUser}/>} /> 
       <Route exact path='/signup'     render={()=> this.state.currentUser ? <Redirect to ='/main'/> : <SignUp signUp={this.signUp} setLogInUser={this.setLogInUser} user={this.state.logInUser}/> } />
