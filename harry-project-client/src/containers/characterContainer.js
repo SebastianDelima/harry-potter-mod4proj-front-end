@@ -24,7 +24,9 @@ class CharacterContainer extends React.Component{
     })
 
   }
+
   render(){
+ 
       return(
         <Fragment>
          
@@ -38,7 +40,7 @@ class CharacterContainer extends React.Component{
           </div>
           <div className="ui two column centered grid">
             {
-            this.searchedCharacter().map(character => <CharacterCard currentUser={this.props.currentUser} key={character.id} character={character}/>)
+            this.searchedCharacter().map(character => <CharacterCard updateUsers={this.props.updateUsers} currentUser={this.props.currentUser} key={character.id} character={character}/>)
             }
           </div>
         </div>

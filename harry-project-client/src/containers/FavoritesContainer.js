@@ -4,25 +4,6 @@ import SpellCard from '../components/SpellCard'
 
 export default class FavoritesContainer extends Component{
 
-    // constructor(){
-    //     super()
-    //     this.state = {
-    //         favorite_characters: null,
-    //         favorite_spells: null
-    //     }
-    // }
-
-    // fetch calls for favorite spells and favorite characters
-    // componentDidMount(){
-
-    //   fetch(`http://127.0.0.1:3000/users/${this.props.currentUser}`)
-    //   .then(res => res.json())
-    //   .then(favorite_characters => this.setState({
-    //       favorite_characters: favorite_characters.characters,
-    //       favorite_spells: favorite_characters.spells
-    //     }))
-    
-    // }
 
     render(){
         return(
@@ -37,19 +18,13 @@ export default class FavoritesContainer extends Component{
             </div>
             <div className="ui two column centered grid">
             { 
-
-                this.state.favorite_characters ? this.state.favorite_characters.map(char => <CharacterCard character={char} key={char.id}/>) :
-                <div></div>
-                
+                this.props.currentUser.characters.map(char => <CharacterCard currentUser={this.props.currentUser} delete={"delete"} character={char} key={char.id}/>)                
             }
           
             </div>
             <div>
-            { 
-                
-                this.state.favorite_spells ? this.state.favorite_spells.map(spell => <SpellCard spell={spell} key={spell.id}/>) :
-                <div></div>
-
+            {              
+                this.props.currentUser.spells.map(spell => <SpellCard currentUser={this.props.currentUser} spell={spell} key={spell.id}/>) 
             }
             </div>
         </div>
