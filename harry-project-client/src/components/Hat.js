@@ -17,6 +17,8 @@ export default class Hat extends Component{
         })
     }
         fetch('http://localhost:3000/users', objectConfig)
+        .then(res => res.json())
+        .then(user => this.props.setCurrentUser(user))
     }
    
     sortHouse = () => {
@@ -32,7 +34,7 @@ export default class Hat extends Component{
             <div>
                <img alt='sorting hat' src='https://media1.tenor.com/images/426045f4dc47e5bfaaa2b095ed179895/tenor.gif?itemid=13986854'></img>
                <h1>Your destiny is: {house} </h1>
-               <Link to='main' value ="link" onClick={(e) => {this.props.setCurrentUser(e); this.postUser(house)}}
+               <Link to='main' value ="link" onClick={this.postUser(house)}
                 >Continue your magical journey!</Link>
             </div>
         )

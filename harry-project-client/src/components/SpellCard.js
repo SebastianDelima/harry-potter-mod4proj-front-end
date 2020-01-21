@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class SpellCard extends Component{
     
     addToFavorites = (e) => {
-        // debugger
+        debugger
         let objectConfig = {
             method: 'POST',
             headers: {
