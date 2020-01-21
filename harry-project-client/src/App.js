@@ -111,7 +111,7 @@ class App extends React.Component{
       <Route exact path='/login'      render={()=> this.state.currentUser ? <Redirect to ='/main'/> : <Login setCurrentUser={this.setCurrentUser} setLogInUser={this.setLogInUser}/>} /> 
       <Route exact path='/signup'     render={()=> this.state.currentUser ? <Redirect to ='/main'/> : <SignUp signUp={this.signUp} setLogInUser={this.setLogInUser} user={this.state.logInUser}/> } />
       <Route exact path='/characters' render={()=> this.state.currentUser ? <CharacterContainer currentUser={this.state.currentUser} characters={this.state.characters} /> :  <Redirect to ="/login"/>} /> 
-      <Route exact path='/spells'     render={()=> this.state.currentUser ? <SpellsContainer spells={this.state.spells} /> : <Redirect to ="/login"/>} />
+      <Route exact path='/spells'     render={()=> this.state.currentUser ? <SpellsContainer currentUser={this.state.currentUser} spells={this.state.spells} /> : <Redirect to ="/login"/>} />
     </Switch>
   
 
