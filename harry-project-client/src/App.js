@@ -34,16 +34,18 @@ class App extends React.Component{
 
     if(findUser !== undefined){
       this.setState({
-        currentUser: findUser.id
+        currentUser: findUser
       })
     }else{
       window.alert("Wrong username")
     }
   }
 
-  setCurrentUserSignUp = () =>{
+  setCurrentUserSignUp = (user) =>{
+ 
     this.setState({
-      currentUser: true
+      currentUser: user.id
+
     })
   }
 
