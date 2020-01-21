@@ -20,7 +20,7 @@ export default class CharacterCard extends Component{
 
     render() {
         return (
-            <div className="ui  cards" id="image">
+            <div className="ui cards" id="image">
                 <span></span>
                 <div id= 'cards'>
                 <div className="card" >

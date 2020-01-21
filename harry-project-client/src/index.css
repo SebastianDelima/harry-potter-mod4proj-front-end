@@ -2,13 +2,13 @@ body{
   background-color:white;
 }
 #image{
-  
   width: 500px;
   height: 600px;
   background: url("./harry_image.png") no-repeat;
   background-size: 440px;
  
 }
+
 
 #cards{
   

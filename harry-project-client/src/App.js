@@ -21,7 +21,8 @@ class App extends React.Component{
       currentUser: false,
       users:[],
       logInUser: null,
-      validName: null
+      validName: null,
+      search:""
     }
 
   }
@@ -68,6 +69,17 @@ class App extends React.Component{
    
   }
 
+  searchedCharacter=()=>{
+    return this.state.characters.filter(character => character.name.toLowerCase().includes(this.state.search))
+  }
+
+  serchCharacter=(e)=>{
+    this.setState({
+      search : e.target.value
+    })
+  }
+  
+
   componentDidMount(){
 
     fetch("http://localhost:3000/characters")
@@ -109,7 +121,7 @@ class App extends React.Component{
       <Route exact path='/main'       render={()=> this.state.currentUser ? <Main/> : <Redirect to ="/login"/>}/> 
       <Route exact path='/login'      render={()=> this.state.currentUser ? <Redirect to ='/main'/> : <Login setCurrentUser={this.setCurrentUser} setLogInUser={this.setLogInUser}/>} /> 
       <Route exact path='/signup'     render={()=> this.state.currentUser ? <Redirect to ='/main'/> : <SignUp signUp={this.signUp} setLogInUser={this.setLogInUser} user={this.state.logInUser}/> } />
-      <Route exact path='/characters' render={()=> this.state.currentUser ? <CharacterContainer characters={this.state.characters} /> :  <Redirect to ="/login"/>} /> 
+      <Route exact path='/characters' render={()=> this.state.currentUser ? <CharacterContainer serchCharacter={this.serchCharacter} searchedCharacter={this.searchedCharacter()} /> :  <Redirect to ="/login"/>} /> 
       <Route exact path='/spells'     render={()=> this.state.currentUser ? <SpellsContainer spells={this.state.spells} /> : <Redirect to ="/login"/>} />
     </Router>
   </Fragment>

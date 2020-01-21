@@ -2,33 +2,25 @@ import React, { Component } from 'react';
 
 export default class SpellCard extends Component{
     render() {
+        let {name, category, effect} = this.props.spell
         return (
             <div>
-                <div class="ui link cards">
-                    <div class="card">
-                        <div class="image">
-                        <img alt="pic" src="/images/avatar2/large/matthew.png" />
-                        </div>
-                        <div className="content">
-                        <div className="header">Matt Giampietro</div>
-                        <div className="meta">
-                            <a href="/">Friends</a>
-                        </div>
-                        <div class="description">
-                            Matthew is an interior designer living in New York.
-                        </div>
-                        </div>
-                        <div class="extra content">
-                        <span class="right floated">
-                            Joined in 2013
-                        </span>
-                        <span>
-                            <i class="user icon"></i>
-                            75 Friends
-                        </span>
-                        </div>
-                    </div>
-                </div>
+                <table class="ui inverted puple table">
+                <thead>
+                    <tr>
+                        <th align="left">Food</th>
+                        <th align="left">Calories</th>
+                        <th align="left">Protein</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td align="left">{name}</td>
+                        <td align="left">{category}</td>
+                        <td align="left">{effect}</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         );
     }
