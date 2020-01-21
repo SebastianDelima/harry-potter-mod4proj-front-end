@@ -8,6 +8,8 @@ class Main extends React.Component{
        <NavLink to='/characters' exact>Characters</NavLink>
        <p></p>
        <NavLink to='/spells' exact>Spells</NavLink>
+       <p></p>
+       <NavLink to='/favorites' exact>Favorites</NavLink>
       </div>)
   }
 }
