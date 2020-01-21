@@ -57,7 +57,7 @@ class App extends React.Component{
     })
   }
 
-  signUp = (e) => {
+  signUp = () => {
 
     if(this.state.users.find(user => user.name === this.state.logInUser) === undefined){
 
@@ -69,33 +69,39 @@ class App extends React.Component{
       }
    
   }
+
+  updateUsers = (user) => {
+    this.setState({
+      currentUser: user
+    })
+  }
   
 
   componentDidMount(){
 
-    fetch("http://localhost:3000/characters")
-    .then(res=>res.json())
-    .then(characters=> {
-      this.setState({
-        characters
+      fetch("http://localhost:3000/characters")
+      .then(res=>res.json())
+      .then(characters=> {
+        this.setState({
+          characters
+        })
       })
-    })
 
-    fetch("http://localhost:3000/spells")
-    .then(res => res.json())
-    .then(spells=>{
-      this.setState({
-        spells
+      fetch("http://localhost:3000/spells")
+      .then(res => res.json())
+      .then(spells=>{
+        this.setState({
+          spells
+        })
       })
-    })
 
-    fetch("http://localhost:3000/users")
-    .then(res => res.json())
-    .then(users=>{
-      this.setState({
-        users
+      fetch("http://localhost:3000/users")
+      .then(res => res.json())
+      .then(users=>{
+        this.setState({
+          users
+        })
       })
-    })
 
   }
 
@@ -112,8 +118,8 @@ class App extends React.Component{
       <Route exact path='/main'       render={()=> this.state.currentUser ? <Main/> : <Redirect to ="/login"/>}/> 
       <Route exact path='/login'      render={()=> this.state.currentUser ? <Redirect to ='/main'/> : <Login setCurrentUser={this.setCurrentUser} setLogInUser={this.setLogInUser}/>} /> 
       <Route exact path='/signup'     render={()=> this.state.currentUser ? <Redirect to ='/main'/> : <SignUp signUp={this.signUp} setLogInUser={this.setLogInUser} user={this.state.logInUser}/> } />
-      <Route exact path='/characters' render={()=> this.state.currentUser ? <CharacterContainer currentUser={this.state.currentUser} characters={this.state.characters} /> :  <Redirect to ="/login"/>} /> 
-      <Route exact path='/spells'     render={()=> this.state.currentUser ? <SpellsContainer currentUser={this.state.currentUser} spells={this.state.spells} /> : <Redirect to ="/login"/>} />
+      <Route exact path='/characters' render={()=> this.state.currentUser ? <CharacterContainer updateUsers={this.updateUsers} currentUser={this.state.currentUser} characters={this.state.characters} /> :  <Redirect to ="/login"/>} /> 
+      <Route exact path='/spells'     render={()=> this.state.currentUser ? <SpellsContainer updateUsers={this.updateUsers} currentUser={this.state.currentUser} spells={this.state.spells} /> : <Redirect to ="/login"/>} />
     </Switch>
   
 

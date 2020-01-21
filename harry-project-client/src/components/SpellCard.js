@@ -15,6 +15,8 @@ export default class SpellCard extends Component{
             })
         }
             fetch('http://127.0.0.1:3000/favorite_spells', objectConfig)
+            .then(res => res.json())
+            .then(user => this.props.updateUsers(user))
         }
     render() {
         // console.log(this.props.currentUser)
@@ -22,7 +24,7 @@ export default class SpellCard extends Component{
         let {name, category, effect} = this.props.spell
         return (
             <div>
-                <table class="ui inverted puple table">
+                <table className="ui inverted puple table">
                 <thead>
                     <tr>
                         <th align="left">Name</th>
@@ -36,7 +38,7 @@ export default class SpellCard extends Component{
                         <td align="left">{name}</td>
                         <td align="left">{category}</td>
                         <td align="left">{effect}</td>
-                        <td><button data-id={this.props.spell.id} data-user-id={this.props.currentUser} onClick={this.addToFavorites}>Add to Favorite</button></td>
+                        <td><button data-id={this.props.spell.id} data-user-id={this.props.currentUser.id} onClick={this.addToFavorites}>Add to Favorite</button></td>
                     </tr>
                     </tbody>
                     

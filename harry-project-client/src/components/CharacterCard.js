@@ -15,10 +15,13 @@ export default class CharacterCard extends Component{
             })
         }
             fetch('http://127.0.0.1:3000/favorite_characters', objectConfig)
+            .then(res => res.json())
+            .then(user => this.props.updateUsers(user))
         }
     
 
     render() {
+     
         return (
             <div className="ui cards" id="image">
                 <span></span>
@@ -38,7 +41,10 @@ export default class CharacterCard extends Component{
                     </div>
                     <div className="extra content">
                     <div className="meta">
-                        <button data-id={this.props.character.id} data-user-id={this.props.currentUser} onClick={this.addToFavorites}>Add to My Wizards</button>
+                        {
+                            this.props.delete ? <button data-id={this.props.character.id} data-user-id={this.props.currentUser.id} >Delete</button>
+                        : <button data-id={this.props.character.id} data-user-id={this.props.currentUser.id} onClick={this.addToFavorites}>Add to My Wizards</button>
+    }
                     </div>
                     </div>
                 </div>
