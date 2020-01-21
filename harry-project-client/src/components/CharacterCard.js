@@ -25,7 +25,7 @@ export default class CharacterCard extends Component{
                 <div id= 'cards'>
                 <div className="card" >
                     <div className="image">
-                    <img alt="pic" width={280} height={330} src={this.props.character.image} />
+                    <img alt="pic" width={415} height={330} src={this.props.character.image} />
                     </div>
                     <div className="content">
                     <div className="header">{this.props.character.name}</div>

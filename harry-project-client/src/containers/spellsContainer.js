@@ -6,7 +6,7 @@ class SpellsContainer extends React.Component{
       return(
       <div className="spellBackground">
         {
-          this.props.spells.map(spell => <SpellCard key={spell.id} spell={spell} />)
+          this.props.spells.map(spell => <SpellCard currentUser={this.props.currentUser} key={spell.id} spell={spell} />)
         }
       </div>
       )
