@@ -4,7 +4,7 @@ import SpellCard from '../components/SpellCard'
 class SpellsContainer extends React.Component{
   render(){
       return(
-      <div>
+      <div className="spellBackground">
         {
           this.props.spells.map(spell => <SpellCard key={spell.id} spell={spell} />)
         }

@@ -7,6 +7,36 @@
   pointer-events: none;
 }
 
+.ui.category.search{
+  margin-top:0;
+  padding-top:15px;
+  text-align: center;
+}
+
+.spellBackground{
+  background-image: url("https://media.giphy.com/media/PcfozPlZSzARO/giphy.gif"); 
+  padding-top: 100px;
+}
+
+.ui.inverted.puple.table{
+  width:800px;
+  margin:auto;
+  margin-top:5px;
+  table-layout: fixed;
+  font-size:18px;
+}
+
+
+
+.ui.cards:first-child{
+  margin-top:12px;
+}
+
+.characterCardBackground{
+  margin-top: 0;
+  background-image: url("https://media.giphy.com/media/13eD01wPr7iiTC/giphy.gif");
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
