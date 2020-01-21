@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './App.css';
 import Main from './components/Main'
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import CharacterContainer from './containers/characterContainer';
 import SpellsContainer from './containers/spellsContainer';
 import Hat from './components/Hat'
@@ -22,7 +22,6 @@ class App extends React.Component{
       users:[],
       logInUser: null,
       validName: null,
-      search:""
     }
 
   }
@@ -38,7 +37,7 @@ class App extends React.Component{
         currentUser: true
       })
     }else{
-      window.alert("Wrong username or password")
+      window.alert("Wrong username")
     }
   }
 
@@ -67,16 +66,6 @@ class App extends React.Component{
         window.alert('username already taken')
       }
    
-  }
-
-  searchedCharacter=()=>{
-    return this.state.characters.filter(character => character.name.toLowerCase().includes(this.state.search))
-  }
-
-  serchCharacter=(e)=>{
-    this.setState({
-      search : e.target.value
-    })
   }
   
 
@@ -112,8 +101,8 @@ class App extends React.Component{
 
   return (
 
-  <Fragment>
-    <Router>
+  
+    <Switch>
       <Route exact path='/'           component={Welcome}/>
       <Route exact path ='/favorites' component={FavoritesContainer}/>
 
@@ -121,10 +110,10 @@ class App extends React.Component{
       <Route exact path='/main'       render={()=> this.state.currentUser ? <Main/> : <Redirect to ="/login"/>}/> 
       <Route exact path='/login'      render={()=> this.state.currentUser ? <Redirect to ='/main'/> : <Login setCurrentUser={this.setCurrentUser} setLogInUser={this.setLogInUser}/>} /> 
       <Route exact path='/signup'     render={()=> this.state.currentUser ? <Redirect to ='/main'/> : <SignUp signUp={this.signUp} setLogInUser={this.setLogInUser} user={this.state.logInUser}/> } />
-      <Route exact path='/characters' render={()=> this.state.currentUser ? <CharacterContainer serchCharacter={this.serchCharacter} searchedCharacter={this.searchedCharacter()} /> :  <Redirect to ="/login"/>} /> 
+      <Route exact path='/characters' render={()=> this.state.currentUser ? <CharacterContainer characters={this.state.characters} /> :  <Redirect to ="/login"/>} /> 
       <Route exact path='/spells'     render={()=> this.state.currentUser ? <SpellsContainer spells={this.state.spells} /> : <Redirect to ="/login"/>} />
-    </Router>
-  </Fragment>
+    </Switch>
+  
 
   )};
 }
