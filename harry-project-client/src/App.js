@@ -44,7 +44,8 @@ class App extends React.Component{
   setCurrentUserSignUp = (user) =>{
  
     this.setState({
-      currentUser: user.id
+
+      currentUser: user
 
     })
   }
@@ -106,7 +107,7 @@ class App extends React.Component{
   }
 
   render(){
-
+  
   return (
 
   
