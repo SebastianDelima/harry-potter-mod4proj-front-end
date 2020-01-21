@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 export default class CharacterCard extends Component{
 
     addToFavorites = (e) => {
-        debugger
+ 
         let objectConfig = {
             method: 'POST',
             headers: {
                'Content-Type':'application/json'
             }, 
             body: JSON.stringify({
-             user_id: 0,
+             user_id: e.currentTarget.dataset.userId,
              character_id: e.currentTarget.dataset.id
             })
         }
@@ -38,7 +38,7 @@ export default class CharacterCard extends Component{
                     </div>
                     <div className="extra content">
                     <div className="meta">
-                        <button data-id={this.props.character.id} onClick={this.addToFavorites}>Add to My Wizards</button>
+                        <button data-id={this.props.character.id} data-user-id={this.props.currentUser} onClick={this.addToFavorites}>Add to My Wizards</button>
                     </div>
                     </div>
                 </div>

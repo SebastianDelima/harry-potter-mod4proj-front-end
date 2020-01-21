@@ -18,7 +18,7 @@ class App extends React.Component{
     this.state={
       characters:[],
       spells:[],
-      currentUser: false,
+      currentUser: null,
       users:[],
       logInUser: null,
       validName: null,
@@ -34,7 +34,7 @@ class App extends React.Component{
 
     if(findUser !== undefined){
       this.setState({
-        currentUser: true
+        currentUser: findUser.id
       })
     }else{
       window.alert("Wrong username")
@@ -104,13 +104,13 @@ class App extends React.Component{
   
     <Switch>
       <Route exact path='/'           component={Welcome}/>
-      <Route exact path ='/favorites' component={FavoritesContainer}/>
-
+      
       <Route exact path='/hat'        render={()=> this.state.validName   ? <Hat setCurrentUser={this.setCurrentUserSignUp} userName={this.state.logInUser}/>  : <Redirect to ='signup'/>}/>
+      <Route exact path='/favorites'  render={()=> this.state.currentUser ? <FavoritesContainer characters={this.state.characters} currentUser={this.state.currentUser}/> : <Redirect to ="/login"/>}/>
       <Route exact path='/main'       render={()=> this.state.currentUser ? <Main/> : <Redirect to ="/login"/>}/> 
       <Route exact path='/login'      render={()=> this.state.currentUser ? <Redirect to ='/main'/> : <Login setCurrentUser={this.setCurrentUser} setLogInUser={this.setLogInUser}/>} /> 
       <Route exact path='/signup'     render={()=> this.state.currentUser ? <Redirect to ='/main'/> : <SignUp signUp={this.signUp} setLogInUser={this.setLogInUser} user={this.state.logInUser}/> } />
-      <Route exact path='/characters' render={()=> this.state.currentUser ? <CharacterContainer characters={this.state.characters} /> :  <Redirect to ="/login"/>} /> 
+      <Route exact path='/characters' render={()=> this.state.currentUser ? <CharacterContainer currentUser={this.state.currentUser} characters={this.state.characters} /> :  <Redirect to ="/login"/>} /> 
       <Route exact path='/spells'     render={()=> this.state.currentUser ? <SpellsContainer spells={this.state.spells} /> : <Redirect to ="/login"/>} />
     </Switch>
   
