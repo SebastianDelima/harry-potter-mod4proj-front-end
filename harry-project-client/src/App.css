@@ -16,6 +16,7 @@
 .spellBackground{
   background-image: url("https://media.giphy.com/media/PcfozPlZSzARO/giphy.gif"); 
   padding-top: 100px;
+  
 }
 
 .ui.inverted.puple.table{
@@ -34,7 +35,12 @@
 
 .characterCardBackground{
   margin-top: 0;
-  background-image: url("https://media.giphy.com/media/13eD01wPr7iiTC/giphy.gif");
+  background-image: url("download.jpeg");
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  width: 100%;
+  height:100%;
+  /* background-size: cover; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
