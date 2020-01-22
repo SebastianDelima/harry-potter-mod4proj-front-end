@@ -8,14 +8,29 @@ body{
   background-size: 440px;
  
 }
-
-
+#buttonImage{
+  width: 500px;
+  height: 600px;
+  background: url('./imgage.gif') no-repeat;
+  background-size:500px;
+  background-position: 100% 10%;
+}
+.mainContainer{
+  height:100vh;
+}
+.backgroundMain{
+  position: relative;
+  display: inline;
+  padding-bottom:400px;
+}
 #cards{
   
   width: 900px;
   margin-right: 63px;
   margin-top: 35px;
 }
+
+
 
 .ui.category.search{
   margin-top: 40px;

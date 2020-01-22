@@ -18,7 +18,7 @@ class App extends React.Component{
     this.state={
       characters:[],
       spells:[],
-      currentUser: null,
+      currentUser: true,
       users:[],
       logInUser: null,
       validName: null,
@@ -110,8 +110,6 @@ class App extends React.Component{
   
   return (
 
-    <audio>
-     <source src="horse.ogg" type="audio/ogg"></audio>
     <Switch>
       <Route exact path='/'           component={Welcome}/>
       
