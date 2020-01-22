@@ -71,3 +71,7 @@ body{
 .favoriteChaSpell{
   text-align: center;
 }
+
+.btn.btn-secondary.welcome h1{
+  color:black;
+}
