@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {  NavLink } from 'react-router-dom';
 
 export default class Welcome extends Component{
 
@@ -6,8 +7,9 @@ export default class Welcome extends Component{
         return (
             <div className="backgroundWelcome">
                 <h1 className="welcomePhase">Harry potter's Web Page</h1>
-                <button className="btn btn-secondary welcome"><h1>Sign Up!</h1></button>
-                <button className="btn btn-secondary welcome"><h1>Log in!</h1></button>
+                {/* <NavLink to='/favorites' exact>Favorites</NavLink> */}
+                <button className="btn btn-secondary welcome"><NavLink to='/signup' exact><h1>Sign Up!</h1></NavLink></button>
+                <button className="btn btn-secondary welcome"><NavLink to='/login' exact><h1>Log In!</h1></NavLink></button>
             </div>
         );
     }
