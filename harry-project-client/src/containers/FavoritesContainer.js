@@ -5,6 +5,33 @@ import SpellCard from '../components/SpellCard'
 export default class FavoritesContainer extends Component{
 
 
+  constructor(){
+    super()
+    this.state = {
+      fav_characters:null,
+      fav_spells:null
+    }
+    }
+
+    componentDidMount(){
+        fetch("http://localhost:3000/favorite_characters")
+        .then(res => res.json())
+        .then(fav_characters => {
+            this.setState({
+                fav_characters
+            })
+        })
+
+        fetch("http://localhost:3000/favorite_spells")
+        .then(res => res.json())
+        .then(fav_spells => {
+            this.setState({
+                fav_spells
+            })
+        })
+
+      }
+
     render(){
         return(
             <Fragment>
@@ -18,13 +45,13 @@ export default class FavoritesContainer extends Component{
             </div>
             <div className="ui two column centered grid">
             { 
-                this.props.currentUser.characters.map(char => <CharacterCard currentUser={this.props.currentUser} delete={"delete"} character={char} key={char.id}/>)                
+                this.props.currentUser.characters.map(char => <CharacterCard fav_characters={this.state.fav_characters} updateUsers={this.props.updateUsers} currentUser={this.props.currentUser} delete={"delete"} character={char} key={char.id}/>)                
             }
           
             </div>
             <div>
             {              
-                this.props.currentUser.spells.map(spell => <SpellCard currentUser={this.props.currentUser} spell={spell} key={spell.id}/>) 
+                this.props.currentUser.spells.map(spell => <SpellCard fav_spells={this.state.fav_spells} updateUsers={this.props.updateUsers} currentUser={this.props.currentUser} spell={spell} key={spell.id} delete={"delete"}/>) 
             }
             </div>
         </div>

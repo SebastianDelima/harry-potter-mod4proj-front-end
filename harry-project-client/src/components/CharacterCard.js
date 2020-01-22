@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 export default class CharacterCard extends Component{
 
     addToFavorites = (e) => {
- 
+       
+      let user =  this.props.currentUser.characters.filter(char => char.id === parseInt(e.currentTarget.dataset.id,10))
+    //   debugger
+        if(user.length === 0){
         let objectConfig = {
             method: 'POST',
             headers: {
@@ -17,8 +20,28 @@ export default class CharacterCard extends Component{
             fetch('http://127.0.0.1:3000/favorite_characters', objectConfig)
             .then(res => res.json())
             .then(user => this.props.updateUsers(user))
+        }else{
+            window.alert("You already added this Wizard")
         }
+    }
     
+    deleteCharacter=(e)=>{
+        // debugger
+        let fav_character = this.props.fav_characters.find(char => char.character_id === parseInt(e.currentTarget.dataset.id, 10))
+          
+        let objectConfig = {
+            method: 'DELETE',
+            headers: {
+               'Content-Type':'application/json'
+            }, 
+            body: JSON.stringify({
+             user_id: e.currentTarget.dataset.userId
+            })
+          }
+            fetch(`http://127.0.0.1:3000/favorite_characters/${fav_character.id}`, objectConfig)
+            .then(res => res.json())
+            .then(user => this.props.updateUsers(user))
+    }
 
     render() {
      
@@ -42,9 +65,9 @@ export default class CharacterCard extends Component{
                     <div className="extra content">
                     <div className="meta">
                         {
-                            this.props.delete ? <button data-id={this.props.character.id} data-user-id={this.props.currentUser.id} >Delete</button>
+                            this.props.delete ? <button data-id={this.props.character.id} data-user-id={this.props.currentUser.id} onClick={this.deleteCharacter} >Delete</button>
                         : <button data-id={this.props.character.id} data-user-id={this.props.currentUser.id} onClick={this.addToFavorites}>Add to My Wizards</button>
-    }
+                        }
                     </div>
                     </div>
                 </div>

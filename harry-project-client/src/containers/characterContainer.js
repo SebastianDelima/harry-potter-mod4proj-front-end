@@ -7,7 +7,9 @@ class CharacterContainer extends React.Component{
   constructor(){
     super()
     this.state = {
-      search: ""
+      search: "",
+      fav_characters:null,
+      fav_spells:null
     }
   }
 
@@ -25,8 +27,9 @@ class CharacterContainer extends React.Component{
 
   }
 
+
   render(){
- 
+  
       return(
         <Fragment>
          
