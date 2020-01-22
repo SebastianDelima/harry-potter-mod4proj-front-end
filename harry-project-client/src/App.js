@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './App.css';
 import Main from './components/Main'
 import { Switch, Route, Redirect } from 'react-router-dom';
@@ -109,10 +109,9 @@ class App extends React.Component{
   render(){
   
   return (
-
     <Switch>
       <Route exact path='/'           component={Welcome}/>
-      
+
       <Route exact path='/hat'        render={()=> this.state.validName   ? <Hat setCurrentUser={this.setCurrentUserSignUp} userName={this.state.logInUser}/>  : <Redirect to ='signup'/>}/>
       <Route exact path='/favorites'  render={()=> this.state.currentUser ? <FavoritesContainer updateUsers={this.updateUsers} characters={this.state.characters} currentUser={this.state.currentUser}/> : <Redirect to ="/login"/>}/>
       <Route exact path='/main'       render={()=> this.state.currentUser ? <Main/> : <Redirect to ="/login"/>}/> 
@@ -121,8 +120,7 @@ class App extends React.Component{
       <Route exact path='/characters' render={()=> this.state.currentUser ? <CharacterContainer updateUsers={this.updateUsers} currentUser={this.state.currentUser} characters={this.state.characters} /> :  <Redirect to ="/login"/>} /> 
       <Route exact path='/spells'     render={()=> this.state.currentUser ? <SpellsContainer updateUsers={this.updateUsers} currentUser={this.state.currentUser} spells={this.state.spells} /> : <Redirect to ="/login"/>} />
     </Switch>
-  
-
+   
   )};
 }
 
