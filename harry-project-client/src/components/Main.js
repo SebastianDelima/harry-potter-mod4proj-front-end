@@ -1,16 +1,25 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import {  NavLink } from 'react-router-dom';
+import Sidebar from './NavBar'
+
 
 class Main extends React.Component{
+  
   render(){
+
+  
+
       return(
-      <div>
+        <Fragment>
+   
+     <div>
        <NavLink to='/characters' exact>Characters</NavLink>
        <p></p>
        <NavLink to='/spells' exact>Spells</NavLink>
        <p></p>
        <NavLink to='/favorites' exact>Favorites</NavLink>
-      </div>)
+      </div>
+      </Fragment>)
   }
 }
 
