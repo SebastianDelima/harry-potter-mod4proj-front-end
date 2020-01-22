@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './App.css';
 import Main from './components/Main'
 import { Switch, Route, Redirect } from 'react-router-dom';
@@ -109,9 +109,8 @@ class App extends React.Component{
   render(){
   
   return (
-
-    <audio>
-     <source src="horse.ogg" type="audio/ogg"></audio>
+   <Fragment>
+  
     <Switch>
       <Route exact path='/'           component={Welcome}/>
       
@@ -123,8 +122,7 @@ class App extends React.Component{
       <Route exact path='/characters' render={()=> this.state.currentUser ? <CharacterContainer updateUsers={this.updateUsers} currentUser={this.state.currentUser} characters={this.state.characters} /> :  <Redirect to ="/login"/>} /> 
       <Route exact path='/spells'     render={()=> this.state.currentUser ? <SpellsContainer updateUsers={this.updateUsers} currentUser={this.state.currentUser} spells={this.state.spells} /> : <Redirect to ="/login"/>} />
     </Switch>
-  
-
+    </Fragment>
   )};
 }
 
