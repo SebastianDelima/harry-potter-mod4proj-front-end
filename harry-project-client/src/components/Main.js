@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import {  NavLink } from 'react-router-dom';
-import Sidebar from './NavBar'
 
 
 class Main extends React.Component{
