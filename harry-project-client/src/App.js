@@ -18,7 +18,7 @@ class App extends React.Component{
     this.state={
       characters:[],
       spells:[],
-      currentUser: true,
+      currentUser: null,
       users:[],
       logInUser: null,
       validName: null,
