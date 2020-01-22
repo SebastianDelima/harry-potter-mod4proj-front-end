@@ -148,11 +148,11 @@ body{
 } */
 
 .characterMain{
-  margin-top:38.5vh;
+  margin-top:38vh;
   margin-left:25vw;
-  margin-right:4.4vw;
-  padding:57px;
-  font-size:70px;
+  margin-right:3.9vw;
+  padding:42px 55px;
+  font-size:80px;
   background-color:black;
 }
 .characterMain a{
@@ -160,11 +160,11 @@ body{
 }
 
 .spellMain{
-  margin-top:39vh;
+  margin-top:38vh;
   margin-left:12vw;
   margin-right:4vw;
-  padding:60px;
-  font-size:70px;
+  padding:48px 70px;
+  font-size:80px;
   background-color:black;
 }
 .spellMain a{

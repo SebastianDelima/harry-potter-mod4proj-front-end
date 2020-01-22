@@ -31,11 +31,15 @@ export default class Hat extends Component{
     render() {
      let house = this.sortHouse()
         return (
-            <div>
-               <img alt='sorting hat' src='https://media1.tenor.com/images/426045f4dc47e5bfaaa2b095ed179895/tenor.gif?itemid=13986854'></img>
-               <h1>Your destiny is: {house} </h1>
-               <Link to='main' value ="link" onClick={(event) => {this.postUser(house)}}
-                >Continue your magical journey!</Link>
+            <div className="hatContainer">
+                <div className="hatImagePosition" id="hatFrame">
+                    <img alt='sorting hat' height={320} width={488} id="hatImage" src='https://media1.tenor.com/images/426045f4dc47e5bfaaa2b095ed179895/tenor.gif?itemid=13986854'></img>
+                </div>
+                <div className="hatFontButton">
+                    <h1>Your destiny is: {house} </h1>
+                    <Link to='main' value ="link" className="clickContinue" onClick={(event) => {this.postUser(house)}}
+                        >Continue your magical journey!</Link>
+                </div>
             </div>
         )
         
