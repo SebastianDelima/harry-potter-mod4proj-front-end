@@ -21,8 +21,36 @@
   height: 100vh;
   padding-top:5%;
   padding-left:8%;
-  /* padding:0;
-  margin:0; */
+  padding:0;
+  margin:0;
+}
+
+#logInForm{
+  margin-left: 38%;
+  position: center;
+  margin-top: 13%;
+  width: 400px;
+  height: 350px;
+}
+
+
+#firstName{
+  margin-top: 10px;
+  font-size: 50px;
+}
+
+#muggle{
+  margin-top: 30px;
+  font-size: 40px;
+}
+
+#solemnly{
+  margin-top: 30px;
+  font-size: 40px;
+}
+
+#subButton{
+  margin-top: 30px;
 }
 
 @font-face { font-family: JuneBug; src: url('HARRYP__.TTF'); } 
@@ -33,14 +61,15 @@ h1 {
 }
 .welcomePhase{
   font-family: JuneBug;
+  text-align: center;
   font-size:200px;
   color:lightslategray;
   
 }
 .btn.btn-secondary{
   font-family: myFirstFont;
-  margin-top:15%;
-  margin-left:10%;
+  margin-top:10%;
+  margin-left:20%;
   height:20vh;
   background-color:rgb(101, 120, 138);
   /* back */

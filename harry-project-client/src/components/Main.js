@@ -5,12 +5,10 @@ class Main extends React.Component{
   render(){
       return(
         <Fragment>
-        
       <div className="mainContainer">
         <div className="sidenav">
           <a href="#about">About</a>
           <NavLink to='/favorites' exact>Favorites</NavLink>
-          {/* <img className="flameButton" src='./imgage.gif' alt="Snow"/> */}
         </div>
         
         <div className="backgroundMain" id='buttonImage'>

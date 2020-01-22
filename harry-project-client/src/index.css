@@ -75,3 +75,8 @@ body{
 .btn.btn-secondary.welcome h1{
   color:black;
 }
+
+.audioPosition{
+  display: block;
+  text-align: left;
+}
