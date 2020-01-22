@@ -35,6 +35,7 @@ export default class FavoritesContainer extends Component{
     render(){
         return(
             <Fragment>
+                
             <div className="characterCardBackground">
             <div className="ui category search">
             <div className="ui icon input">
@@ -43,19 +44,21 @@ export default class FavoritesContainer extends Component{
             </div>
             <div className="results"></div>
             </div>
+            <h1 className="favoriteChaSpell">Favorite Character(s)</h1>
             <div className="ui two column centered grid">
             { 
                 this.props.currentUser.characters.map(char => <CharacterCard fav_characters={this.state.fav_characters} updateUsers={this.props.updateUsers} currentUser={this.props.currentUser} delete={"delete"} character={char} key={char.id}/>)                
             }
           
             </div>
+            </div>
+            <h1 className="favoriteChaSpell">Favorite spell(s)</h1>
             <div>
             {              
                 this.props.currentUser.spells.map(spell => <SpellCard fav_spells={this.state.fav_spells} updateUsers={this.props.updateUsers} currentUser={this.props.currentUser} spell={spell} key={spell.id} delete={"delete"}/>) 
             }
             </div>
-        </div>
         </Fragment>
-            )
+        )
     }
 }
