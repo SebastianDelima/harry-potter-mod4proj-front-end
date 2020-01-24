@@ -1,5 +1,6 @@
 body{
   background-color:white;
+  background:url('./download.jpeg')
 }
 
 #image{
@@ -10,21 +11,25 @@ body{
 }
 
 #buttonImage{
-  width: 500px;
-  height: 600px;
+  width: 400px;
+  height: 250px;
   background: url('./imgage.gif') no-repeat;
-  background-size:450px;
-  background-position: 100% 10%;
+  background-size:350px;
+
 }
 
 .mainContainer{
   height:100vh;
+  margin-left:15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .backgroundMain{
   position: relative;
   display: inline;
-  padding-bottom:400px;
+  /* padding-bottom:400px; */
 }
 
 #cards{
@@ -56,7 +61,12 @@ body{
   padding-top:2%;
   text-align: center;
 }
-
+#signupFrame{
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
 #hatFrame{
   background:url('./imgage.gif') no-repeat;
   background-size: 700px;
