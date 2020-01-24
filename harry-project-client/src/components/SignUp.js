@@ -6,7 +6,7 @@ export default class SignUp extends Component{
         return (
 
             <div className="formContainer" id="signupFrame">
-            <div className="ui inverted segment" id="logInForm">
+            <div className="ui inverted segment" >
             <div className="ui inverted form">
               <div className="one field">
                 <div className="field">

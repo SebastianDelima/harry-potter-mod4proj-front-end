@@ -24,15 +24,12 @@
   padding:0;
   margin:0;
 }
-
-#logInForm{
-  margin-left: 38%;
-  position: center;
-  margin-top: 13%;
-  width: 400px;
-  height: 350px;
+.logInContainer{
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 #firstName{
   margin-top: 10px;
@@ -68,11 +65,25 @@ h1 {
 }
 .btn.btn-secondary{
   font-family: myFirstFont;
-  margin-top:10%;
+  /* margin-top:10%;
   margin-left:20%;
-  height:20vh;
+  height:20vh; */
   background-color:rgb(101, 120, 138);
-  /* back */
+}
+
+.welcomeButtonContainer{
+  /* height:100%; */
+  margin-top:7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around
+}
+
+.welcomeAudioButton{
+  margin-top:5%;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 
@@ -90,7 +101,11 @@ h1 {
   font-size:18px;
 }
 
-
+#shield{
+  margin-left: 10px;
+  width: 120px;
+  height: auto;
+}
 #cards{
   width:58%;
   margin-left:68px;
@@ -119,7 +134,7 @@ body{
 
 .sidenav {
   height: 100%;
-  width: 160px;
+  width: 200px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -140,6 +155,11 @@ body{
 .sidenav a:hover {
   color: #f1f1f1;
 }
+
+#line{
+  z-index: 1;
+  color: #f1f1f1
+}
 /* 
 .backgroundMain{
     background-image: url('https://media.giphy.com/media/pYCZPDymIVjeo/giphy.gif');
@@ -148,15 +168,46 @@ body{
     padding:0;
     margin:0;
 } */
+#favWiz{
+  font-size: 40px;
+}
+#mainName{
+  font-size: 50px;
+}
 
-.characterMain{
-  margin-top:38vh;
-  margin-left:25vw;
-  margin-right:3.9vw;
-  padding:42px 55px;
+#houseInfo{
+  font-size: 40px;
+}
+
+
+.mainbuttonContainer{
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn.btn-warning.characterMain{
+  width:250px;
+  height:160px;
+  margin:0;
+  margin-left:50px;
+  margin-top:40px;
+  padding:0;
   font-size:80px;
   background-color:black;
 }
+
+.btn.btn-warning.spellMain{
+  width:250px;
+  height:160px;
+  margin:0;
+  margin-left:50px;
+  margin-top:40px;
+  padding:0;
+  font-size:80px;
+  background-color:black;
+}
+
 .characterMain a{
   color:gray
 }
@@ -165,7 +216,7 @@ body{
   margin-top:38vh;
   margin-left:12vw;
   margin-right:4vw;
-  padding:48px 70px;
+  padding:48px 82px;
   font-size:80px;
   background-color:black;
 }
@@ -183,6 +234,8 @@ body{
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+
 
 .App-header {
   background-color: #282c34;

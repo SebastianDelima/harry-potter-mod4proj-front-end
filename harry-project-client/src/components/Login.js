@@ -24,7 +24,7 @@ export default class Login extends Component{
 
     render() {
         return (
-           
+            <div className="logInContainer">
             <div className="ui inverted segment" id="logInForm">
             <div className="ui inverted form">
               <div className="one field">
@@ -47,7 +47,7 @@ export default class Login extends Component{
               <div className="ui submit button" id="subButton" onClick={this.props.setCurrentUser}>Log In</div>
             </div>
           </div>
-                
+          </div>
             // {/* <div>
             //     <form className="ui form">
             //         <div className="field">

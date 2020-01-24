@@ -8,7 +8,7 @@ export default class Welcome extends Component{
     constructor(){
         super()
         this.state ={
-            audio: null
+            audio: true
         }
     }
 
@@ -31,12 +31,18 @@ export default class Welcome extends Component{
             <div className="backgroundWelcome">
                 <h1 className="welcomePhase">My Horcrux</h1>
                 {/* <NavLink to='/favorites' exact>Favorites</NavLink> */}
+                <div className="welcomeButtonContainer">
                 <button className="btn btn-secondary welcome"><NavLink to='/signup' exact><h1>Sign Up!</h1></NavLink></button>
                 <button className="btn btn-secondary welcome"><NavLink to='/login' exact><h1>Log In!</h1></NavLink></button>
+                </div>
+                
+                <div className="welcomeAudioButton">
                 <button onClick={this.playAudio} className="audioPosition">audio</button>
+                </div>
                     {
-                this.state.audio ? <audio ref='audio_tag' src={sound} type="audio/mp3"  autoPlay /> :null
+                 this.state.audio ? <audio ref='audio_tag' src={sound} type="audio/mp3"  autoPlay /> :null
                 }
+               
             </div>
         
            

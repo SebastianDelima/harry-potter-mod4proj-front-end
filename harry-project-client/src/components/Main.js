@@ -6,9 +6,17 @@ class Main extends React.Component{
       return(
         <Fragment>
       <div className="mainContainer">
-        <div className="sidenav">
-          <a href="#about">About</a>
-          <NavLink to='/favorites' exact>Favorites</NavLink>
+        <div className="sidenav" >
+        
+         
+           <img id="shield" src='https://www.att.com/catalog/en/idse/PopSockets/PopSocket%20Gryffindor/Red-hero-zoom.png' type='icon'/>
+           
+      
+      <a href="#about" id='mainName'>{this.props.userInfo.name}'s Info</a>
+        <a id="houseInfo">House: {this.props.userInfo.house}</a>
+        <p></p>
+        <hr id="line"></hr>
+      <NavLink id="favWiz" to='/favorites' exact>Favorite Wizard's {"&"} Spells</NavLink>
         </div>
         
         <div className="backgroundMain" id='buttonImage'>
@@ -16,8 +24,8 @@ class Main extends React.Component{
           <button className="btn btn-warning characterMain"><NavLink to='/characters' exact>Wizards</NavLink></button>
         </div>
         <div className="backgroundMain" id='buttonImage'>
+          <button className="btn btn-warning spellMain"><NavLink to='/spells' exact> Spells  </NavLink></button>
          <span></span>
-          <button className="btn btn-warning spellMain"><NavLink to='/spells' exact> &nbsp;Spells&nbsp;&nbsp;&nbsp;  </NavLink></button>
         </div>
       </div>
       </Fragment>
