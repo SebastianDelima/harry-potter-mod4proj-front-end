@@ -19,7 +19,7 @@ export default class SignUp extends Component{
                     
                     <input type="checkbox" tabindex="0" class="hidden"  checked/>:
                 
-                  <label id="muggle">I swear I'm not a muggle.</label>
+                  <label id="muggle"> I'm not a muggle.</label>
                 </div>
               </div>
               <Link 
@@ -32,21 +32,7 @@ export default class SignUp extends Component{
             </div>
           </div>
           </div>
-            // <div>
-            //     <form className="ui form">
-            //         <div className="field">
-            //             <label>Name: </label>
-            //             <input type="text" name="first-name" placeholder="Name" onChange={this.props.setLogInUser}/>
-            //         </div>
-            //         <Link 
-            //             to ={{pathname:'/hat',}}
-            //             className="ui button"
-            //             type="submit"
-            //             onClick={this.props.signUp}
-            //             >Sign up
-            //         </Link>
-            //     </form>
-            // </div>
+            
         );
     }
 }

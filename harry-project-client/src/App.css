@@ -105,7 +105,10 @@ h1 {
   margin-left: 10px;
   width: 120px;
   height: auto;
+  border-radius: 50%;
+  border-style: solid;
 }
+
 #cards{
   width:58%;
   margin-left:68px;
