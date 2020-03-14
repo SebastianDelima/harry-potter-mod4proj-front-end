@@ -42,9 +42,11 @@ class CharacterContainer extends React.Component{
           <div className="results"></div>
           </div>
           <div className="ui two column centered grid">
+
             {
             this.searchedCharacter().map(character => <CharacterCard updateUsers={this.props.updateUsers} currentUser={this.props.currentUser} key={character.id} character={character}/>)
             }
+            
           </div>
         </div>
         </Fragment>

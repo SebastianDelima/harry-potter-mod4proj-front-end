@@ -3,8 +3,13 @@ import React, { Component } from 'react';
 export default class SpellCard extends Component{
     
     addToFavorites = (e) => {
+
         let spell =  this.props.currentUser.spells.filter(spell => spell.id === parseInt(e.currentTarget.dataset.id,10))
+
         if(spell.length === 0 ){
+
+            window.alert("spell added!")
+
         let objectConfig = {
             method: 'POST',
             headers: {
@@ -24,6 +29,7 @@ export default class SpellCard extends Component{
     }
 
         deleteSpell=(e)=>{
+
             let fav_spell = this.props.fav_spells.find(spell => spell.spell_id === parseInt(e.currentTarget.dataset.id, 10))
           
             let objectConfig = {
@@ -39,9 +45,9 @@ export default class SpellCard extends Component{
                 .then(res => res.json())
                 .then(user => this.props.updateUsers(user))
         }
+
     render() {
-        // console.log(this.props.currentUser)
-        // console.log(this.props.spell.id)
+
         let {name, category, effect} = this.props.spell
         return (
             <div>

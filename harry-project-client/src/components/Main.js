@@ -5,7 +5,7 @@ class Main extends React.Component{
 
 
   render(){
-  debugger
+
 
       return(
         <Fragment>
