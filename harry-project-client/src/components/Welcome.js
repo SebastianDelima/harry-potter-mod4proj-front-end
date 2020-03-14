@@ -29,7 +29,7 @@ export default class Welcome extends Component{
         return (
            
             <div className="backgroundWelcome">
-                <h1 className="welcomePhase">My Horcrux</h1>
+                <h1 className="welcomePrhase">Marauder's Map</h1>
 
                 <div className="welcomeButtonContainer">
                 <button className="btn btn-secondary welcome"><NavLink to='/signup' exact><h1>Sign Up!</h1></NavLink></button>

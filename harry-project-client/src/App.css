@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap');
+ 
+*{
+  margin: 0px;
+  padding: 0px;
+}
 
 .App {
   text-align: center;
@@ -17,12 +22,10 @@
 
 .backgroundWelcome{
   background-color: black;
-  background-size: 100%;
-  height: 100vh;
-  padding-top:5%;
-  padding-left:8%;
-  padding:0;
-  margin:0;
+  background-size: 150%;
+  height: 150%;
+  padding-top: 4.5%;
+ 
 }
 .logInContainer{
   height:100vh;
@@ -56,7 +59,8 @@ h1 {
    font-family: 'Reenie Beanie', cursive;
    font-size:100px;
 }
-.welcomePhase{
+.welcomePrhase{
+  
   font-family: JuneBug;
   text-align: center;
   font-size:200px;
@@ -73,11 +77,11 @@ h1 {
 
 .welcomeButtonContainer{
   /* height:100%; */
-  margin-top:7%;
+  margin-top:20%;
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-around
+  justify-content: space-evenly;
 }
 
 .welcomeAudioButton{
@@ -87,11 +91,6 @@ h1 {
 }
 
 
-/* .spellBackground{
-  background-image: url("https://media.giphy.com/media/PcfozPlZSzARO/giphy.gif"); 
-  padding-top: 100px;
-  
-} */
 
 .ui.inverted.puple.table{
   width:800px;
