@@ -10,11 +10,12 @@ $yellow-grey: #58523a;
 
 .candle{
   width: 34px;
-  margin: 30px auto 0 auto;
   position: relative;
   height: 80%;
   align-self: flex-end;
   animation: blink .1s infinite;
+  bottom: 15.5vw;
+  left: 5vw;
 }
 .wick{
   position: absolute;
@@ -125,7 +126,7 @@ $yellow-grey: #58523a;
   position: relative;
   top: 15px;
   width: 100%;
-  height: 100%;
+  height: 150px;
   background: $orange-yellow;
   background: -moz-linear-gradient(top, $orange-yellow 0px, $orange-yellow 20px, $yellow-grey 50px); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, $orange-yellow 0px, $orange-yellow 20px, $yellow-grey 50px); /* Chrome10-25,Safari5.1-6 */
