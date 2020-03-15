@@ -265,3 +265,10 @@ body{
     transform: rotate(360deg);
   }
 }
+
+button.btn.btn-secondary.welcome{
+  border-style: solid;
+  border-color: #400867;
+  border-width: thick;
+}
+

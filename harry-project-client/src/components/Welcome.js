@@ -35,7 +35,17 @@ export default class Welcome extends Component{
                 <button className="btn btn-secondary welcome"><NavLink to='/signup' exact><h1>Sign Up!</h1></NavLink></button>
                 <button className="btn btn-secondary welcome"><NavLink to='/login' exact><h1>Log In!</h1></NavLink></button>
                 </div>
-                
+                                <div class="candle">
+                <div class="flame">
+                    <div class="shadows"></div>
+                    <div class="top"></div>
+                    <div class="middle"></div>
+                    <div class="bottom"></div>
+                </div>
+                <div class="wick"></div>
+                <div class="wax"></div>
+                </div>     
+
                 <div className="welcomeAudioButton">
                 <button onClick={this.playAudio} className="audioPosition">audio</button>
                 </div>
