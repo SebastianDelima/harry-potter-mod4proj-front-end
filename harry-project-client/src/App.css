@@ -73,8 +73,10 @@ h1 {
   /* margin-top:10%;
   margin-left:20%;
   height:20vh; */
-  background-color:rgb(1, 8, 15);
+  background-color:rgb(0, 2, 3);
 }
+
+
 
 .welcomeButtonContainer{
   /* height:100%; */
@@ -272,3 +274,6 @@ button.btn.btn-secondary.welcome{
   border-width: thick;
 }
 
+.btn.btn-secondary.welcome h1{
+  color: white;
+}

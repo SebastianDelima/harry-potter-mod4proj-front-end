@@ -30,20 +30,27 @@ export default class Welcome extends Component{
            
             <div className="backgroundWelcome">
                 <h1 className="welcomePrhase">Marauder's Map</h1>
-
+                 <div className='explanaition'>
+                    <h5>
+                        Welcome to Marauder's map a place where you can learn and interact with 
+                        Harry Potter's characters and spells, sign in to get asigned into one of
+                        the four Hogwarts houses or log in if you have an account.
+                    </h5>
+                 </div>
                 <div className="welcomeButtonContainer">
                 <button className="btn btn-secondary welcome"><NavLink to='/signup' exact><h1>Sign Up!</h1></NavLink></button>
                 <button className="btn btn-secondary welcome"><NavLink to='/login' exact><h1>Log In!</h1></NavLink></button>
                 </div>
-                                <div class="candle">
-                <div class="flame">
-                    <div class="shadows"></div>
-                    <div class="top"></div>
-                    <div class="middle"></div>
-                    <div class="bottom"></div>
-                </div>
-                <div class="wick"></div>
-                <div class="wax"></div>
+                {/* codepen candle */}
+                     <div class="candle">
+                        <div class="flame">
+                            <div class="shadows"></div>
+                            <div class="top"></div>
+                            <div class="middle"></div>
+                            <div class="bottom"></div>
+                        </div>
+                        <div class="wick"></div>
+                     <div class="wax"></div>
                 </div>     
 
                 <div className="welcomeAudioButton">
