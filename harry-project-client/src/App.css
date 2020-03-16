@@ -61,7 +61,7 @@ h1 {
 }
 
 .welcomePrhase{
-  
+  margin-top: -55px;
   font-family: JuneBug;
   text-align: center;
   font-size:200px;
@@ -276,4 +276,19 @@ button.btn.btn-secondary.welcome{
 
 .btn.btn-secondary.welcome h1{
   color: white;
+}
+
+.explanaition{
+  text-align: center;
+  margin-top: 2vw;
+  margin-bottom: -148px;
+  margin-left: 15%;
+    margin-right: 15%;
+
+}
+
+.explanaitionText{
+  font-size: 61px;
+  font-family: 'Reenie Beanie', cursive;
+  
 }

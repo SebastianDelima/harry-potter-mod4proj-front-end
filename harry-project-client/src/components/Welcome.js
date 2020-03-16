@@ -31,10 +31,9 @@ export default class Welcome extends Component{
             <div className="backgroundWelcome">
                 <h1 className="welcomePrhase">Marauder's Map</h1>
                  <div className='explanaition'>
-                    <h5>
-                        Welcome to Marauder's map a place where you can learn and interact with 
-                        Harry Potter's characters and spells, sign in to get asigned into one of
-                        the four Hogwarts houses or log in if you have an account.
+                    <h5 className='explanaitionText'>
+                        Welcome to Marauder's map. A place where you can learn and interact with 
+                        Harry Potter characters and spells.</h5><h5 className='explanaitionText'> 
                     </h5>
                  </div>
                 <div className="welcomeButtonContainer">
