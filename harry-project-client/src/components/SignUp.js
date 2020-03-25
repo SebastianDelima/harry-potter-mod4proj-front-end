@@ -29,24 +29,11 @@ export default class SignUp extends Component{
                 onClick={this.props.signUp}
                 >Sign up
             </Link>
+            <a href="/"><div className="ui submit button" id="subButton">Back to Welcome</div></a>
             </div>
+
           </div>
           </div>
-            // <div>
-            //     <form className="ui form">
-            //         <div className="field">
-            //             <label>Name: </label>
-            //             <input type="text" name="first-name" placeholder="Name" onChange={this.props.setLogInUser}/>
-            //         </div>
-            //         <Link 
-            //             to ={{pathname:'/hat',}}
-            //             className="ui button"
-            //             type="submit"
-            //             onClick={this.props.signUp}
-            //             >Sign up
-            //         </Link>
-            //     </form>
-            // </div>
         );
     }
 }

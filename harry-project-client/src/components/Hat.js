@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 export default class Hat extends Component{
 
-
     postUser(house){
    
         let objectConfig = {
@@ -37,7 +36,7 @@ export default class Hat extends Component{
                 </div>
                 <div className="hatFontButton">
                     <h1>Your destiny is: {house} </h1>
-                    <Link to='main' value ="link" className="clickContinue" onClick={(event) => {this.postUser(house)}}
+                    <Link to='Main' value ="link" className="clickContinue" onClick={(event) => {this.postUser(house)}}
                         >Continue your magical journey!</Link>
                 </div>
             </div>

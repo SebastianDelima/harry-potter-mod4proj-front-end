@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 export default class Login extends Component{
 
@@ -37,28 +37,19 @@ export default class Login extends Component{
               <div className="inline field">
                 <div className="ui checkbox"  id='checkBox' onClick={this.clickBox}>
                     {
-                        !this.state.checked ? <input type="checkbox" tabindex="0" class="hidden"  checked/>:
-                        <input type="checkbox" tabindex="0" class="hidden" />
+                        !this.state.checked ? <input type="checkbox" tabIndex="0" className="hidden" defaultChecked/>:
+                        <input type="checkbox" tabIndex="0" className="hidden" />
                     }
        
                   <label id="solemnly">I solemnly swear <p></p><p></p>I'm up to no good.</label>
                 </div>
               </div>
               <div className="ui submit button" id="subButton" onClick={this.props.setCurrentUser}>Log In</div>
+              <a href="/"><div className="ui submit button" id="subButton">Back to Welcome</div></a>
+
             </div>
           </div>
-          </div>
-            // {/* <div>
-            //     <form className="ui form">
-            //         <div className="field">
-            //             <label>Name: </label>
-            //             <input type="text" name="first-name" placeholder="First Name" onChange={this.props.setLogInUser}/>
-            //         </div>
-            //         <button className="ui button" type="submit" onClick={this.props.setCurrentUser}>Log in</button>
-            //     </form>
-            // </div> */}
-          
-        
+        </div>        
         );
     }
 }

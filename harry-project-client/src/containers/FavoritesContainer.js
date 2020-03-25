@@ -38,10 +38,6 @@ export default class FavoritesContainer extends Component{
                 
             <div className="characterCardBackground">
             <div className="ui category search">
-            <div className="ui icon input">
-                <input className="prompt" type="text" placeholder="Search..."/>
-                <i className="search icon"></i>
-            </div>
             <div className="results"></div>
             </div>
             <h1 className="favoriteChaSpell">Favorite Character(s)</h1>
