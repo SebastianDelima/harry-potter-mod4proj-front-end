@@ -8,9 +8,9 @@ export default class FavoritesContainer extends Component{
   constructor(){
     super()
     this.state = {
-      fav_characters:null,
-      fav_spells:null
-    }
+      fav_characters: null,
+      fav_spells: null
+      }
     }
 
     componentDidMount(){
@@ -42,6 +42,7 @@ export default class FavoritesContainer extends Component{
             </div>
             <h1 className="favoriteChaSpell">Favorite Character(s)</h1>
             <div className="ui two column centered grid">
+
             { 
                 this.props.currentUser.characters.map(char => <CharacterCard fav_characters={this.state.fav_characters} updateUsers={this.props.updateUsers} currentUser={this.props.currentUser} delete={"delete"} character={char} key={char.id}/>)                
             }
@@ -50,10 +51,12 @@ export default class FavoritesContainer extends Component{
             </div>
             <h1 className="favoriteChaSpell">Favorite spell(s)</h1>
             <div>
+
             {              
                 this.props.currentUser.spells.map(spell => <SpellCard fav_spells={this.state.fav_spells} updateUsers={this.props.updateUsers} currentUser={this.props.currentUser} spell={spell} key={spell.id} delete={"delete"}/>) 
             }
             </div>
+
         </Fragment>
         )
     }

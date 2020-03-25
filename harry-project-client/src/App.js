@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './containers/app.scss';
 import Main from './components/Main'
 import { Switch, Route, Redirect } from 'react-router-dom';
 import CharacterContainer from './containers/characterContainer';

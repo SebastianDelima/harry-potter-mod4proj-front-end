@@ -49,7 +49,12 @@ export default class Login extends Component{
 
             </div>
           </div>
+<<<<<<< HEAD
         </div>        
+=======
+          </div>
+           
+>>>>>>> db9793b9885c2eebb146aa233785670b20bc4352
         );
     }
 }

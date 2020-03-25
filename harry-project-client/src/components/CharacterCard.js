@@ -26,7 +26,7 @@ export default class CharacterCard extends Component{
     }
     
     deleteCharacter=(e)=>{
-        // debugger
+      
         let fav_character = this.props.fav_characters.find(char => char.character_id === parseInt(e.currentTarget.dataset.id, 10))
           
         let objectConfig = {

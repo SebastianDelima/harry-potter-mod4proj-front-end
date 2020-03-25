@@ -19,7 +19,7 @@ export default class SignUp extends Component{
                     
                     <input type="checkbox" tabindex="0" class="hidden"  checked/>:
                 
-                  <label id="muggle">I swear I'm not a muggle.</label>
+                  <label id="muggle"> I'm not a muggle.</label>
                 </div>
               </div>
               <Link 
@@ -34,6 +34,10 @@ export default class SignUp extends Component{
 
           </div>
           </div>
+<<<<<<< HEAD
+=======
+            
+>>>>>>> db9793b9885c2eebb146aa233785670b20bc4352
         );
     }
 }
